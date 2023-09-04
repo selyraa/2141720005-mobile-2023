@@ -61,7 +61,7 @@ Dari peningkatan fitur - fitur yang dimilikinya menjadikan Dart sebagai bahasa m
 
 Masih mempertahankan sifatnya yang fleksibel, Dart dapat dieksekusi menggunakan dua cara, yaitu Dart Virtual Machine dan JavaScript compilation.
 
-![Screenshot](docs\dart-flow.png)
+![Screenshot](docs/dart-flow.png)
 
 Kode Dart dapat dieksekusi pada lingkungan yang mendukung bahasa Dart, yang perlu memperhatikan beberapa fitur berikut:
 
