@@ -65,4 +65,4 @@ Berikut merupakan hasil dari running program yang dapat menampilkan bilangan pri
 
 ![Screenshot](./docs/output_tugas-04.jpg)
 
-![Screenshot](./docs/output_tugas-01.jpg)
+![Screenshot](./docs/output_tugas-05.jpg)
