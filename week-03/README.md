@@ -5,7 +5,7 @@
 
 ### Hasil Running Langkah 3
 
-![Screenshot](/docs/running-03.jpg)
+![Screenshot](./docs/running-03.jpg)
 
 Setelah dilakukan running maka akan terjadi error. Error yang dihasilkan menunjukkan bahwa value dari variabel test merupakan String, namun ketika dilakukan pengecekan pada if, didefinisikan sebagai Booelan, sehingga output tidak bisa dijalankan karena mencoba menbandingkan tipe data String dengan Boolean.
 
@@ -52,7 +52,6 @@ Sama dengan hasil running praktikum 2 di langkah 2 sebelumnya, terdapat error ya
 Output tersebut menunjukkan error, yanag mana banyak penulisan syntax yang kurang sesuai seperti if dan else yang diawali dengan huruf kapital, inkonsisten dalam penulisan variabel index, serta penulisan kode yang kurang lengkap, seperti kurung kurawal, dsb. Maka saya lakukan perbaikan dengan struktur kode sebagaimana berikut:
 
 ![Screenshot](./docs/running-03-perbaikan-01-prak-3.jpg)
-
 
 ## Tugas Praktikum
 
