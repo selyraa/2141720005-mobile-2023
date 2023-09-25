@@ -7,7 +7,7 @@ class MyTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Text(
       "Nama saya Sely Ruli Amanda, sedang belajar Pemrograman Mobile",
-      style: TextStyle(color: Colors.red, fontSize: 14),
+      style: TextStyle(color: Colors.blueAccent, fontSize: 14),
       textAlign: TextAlign.center);
   }
 }

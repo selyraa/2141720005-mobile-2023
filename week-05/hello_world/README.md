@@ -37,4 +37,16 @@ Menambahkan widget berupa input field untuk menerima inputan dari user, di sini 
 ## Date and Time Picker
 Menambahkan date and time picker, yang dapat menerima input berupa selection (pemilihan tanggal dan waktu).
 
-![Screenshot](./images/07.jpg)
+![Screenshot](./images/run-prak-4.gif)
+
+## Tugas Praktikum
+Mengimplementasikan Praktikum 4 Langkah 3 - 6.
+
+##### 1. Membuat file widget class MyLayout, yang berisi function untuk menampilkan alert
+##### 2. Membuat file widget class MyHomePage, yang berisi function untuk menampilkan date and time picker
+##### 3. Import class MyLayout pada class MyHomePage
+##### 4. Panggil class MyHomePage pada main.dart
+
+## HASIL
+
+![Screenshot](./images/run-tugas.gif)
