@@ -40,7 +40,15 @@ Menambahkan date and time picker, yang dapat menerima input berupa selection (pe
 ![Screenshot](./images/run-prak-4.gif)
 
 ## Tugas Praktikum
-Mengimplementasikan Praktikum 4 Langkah 3 - 6.
+### 1. Selesaikan Praktikum 1 sampai 4, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md!
+
+Jawab:
+
+[Praktikum 1-4 Week 5](https://github.com/selyraa/2141720005-mobile-2023/tree/main/week-05/hello_world)
+
+### 2. Mengimplementasikan Praktikum 4 Langkah 3 - 6.
+
+Jawab:
 
 ##### 1. Membuat file widget class MyLayout, yang berisi function untuk menampilkan alert
 ##### 2. Membuat file widget class MyHomePage, yang berisi function untuk menampilkan date and time picker
@@ -50,3 +58,10 @@ Mengimplementasikan Praktikum 4 Langkah 3 - 6.
 ## HASIL
 
 ![Screenshot](./images/run-tugas.gif)
+
+### 3. Selesaikan [Codelabs: Your first Flutter app](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0), lalu buatlah laporan praktikumnya dan push ke repository GitHub Anda!
+
+Jawab:
+
+[namer_app_sely](https://github.com/selyraa/namer_app_sely.git)
+
