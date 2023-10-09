@@ -189,17 +189,13 @@ Membuat widget textSection ke dalam method build()
 
 ```
 Widget textSection = Container(
-  padding: const EdgeInsets.all(32),
-  child: const Text(
-    'Carilah teks di internet yang sesuai '
-    'dengan foto atau tempat wisata yang ingin '
-    'Anda tampilkan. '
-    'Tambahkan nama dan NIM Anda sebagai '
-    'identitas hasil pekerjaan Anda. '
-    'Selamat mengerjakan 🙂.',
-    softWrap: true,
-  ),
-);
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Oeschinen Lake Campground adalah sebuah tempat perkemahan yang terletak di sekitar Danau Oeschinen (Oeschinensee) di Kanton Bern, Swiss. Danau Oeschinen terletak di pegunungan Bernese Oberland, yang merupakan bagian dari Alpen Swiss. Tempat perkemahan ini dikelola oleh pemerintah setempat atau badan pengelola taman nasional dan menawarkan fasilitas camping seperti tempat perkemahan, tempat untuk mendirikan tenda, dan kadang-kadang juga fasilitas seperti toilet umum, tempat sampah, dan area masak.',
+        softWrap: true,
+        textAlign: TextAlign.justify,
+      ),
+    );
 ```
 
 ## Langkah 2: Tambahkan variabel text section ke body
