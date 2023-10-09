@@ -229,4 +229,9 @@ body: ListView(
 ### Hasil
 ![Screenshot](./docs/05.png)
 
-git
+## Tugas Praktikum
+Silakan implementasikan di project baru "basic_layout_flutter" dengan mengakses sumber ini:
+[https://docs.flutter.dev/codelabs/layout-basics](https://docs.flutter.dev/codelabs/layout-basics)
+
+### Jawab
+[basic_layout_flutter](https://github.com/selyraa/basic_layout_flutter.git)
