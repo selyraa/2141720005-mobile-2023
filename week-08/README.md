@@ -33,6 +33,8 @@ class Item {
 
 ```dart
 import 'package:belanja/models/item.dart';
+import 'package:belanja/widgets/bottom_widget.dart';
+import 'package:belanja/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -72,108 +74,138 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: const Text('Shopping List'),
+        ),
+        body: CardWidget(items: items),
+        bottomNavigationBar: const BottomWidget());
+  }
+}
+
+
+```
+#### 3. file item_page.dart
+
+```dart
+import 'package:belanja/widgets/detailsItem_widget.dart';
+import 'package:flutter/material.dart';
+
+class ItemPage extends StatelessWidget {
+  const ItemPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
-        title: const Text('Shopping List'),
+        title: const Text('Item Details'),
       ),
+      body: const DetailsItem(),
+    );
+  }
+}
+```
+### Langkah 3: Membuat Widget
+#### file card_widget.dart
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:belanja/models/item.dart';
+
+class CardWidget extends StatelessWidget {
+  // const CardWidget({super.key});
+  final List<Item> items;
+
+  const CardWidget({required this.items});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, 
-          childAspectRatio: 0.7, 
+          crossAxisCount: 2, // Menampilkan 2 item per baris
+          childAspectRatio: 0.7, // Mengatur rasio lebar-tinggi item
         ),
         itemCount: items.length,
         itemBuilder: (context, index) {
           final item = items[index];
-          return InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, '/item', arguments: item);
-            },
-            child: Card(
-              child: Padding(
-                padding: const EdgeInsets.all(
-                    8), 
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Hero(
-                      tag: 'productImage${item.name}',
-                      child: AspectRatio(
-                        aspectRatio:
-                            1, 
-                        child: Image.asset(item.imageUrl, fit: BoxFit.cover),
+          return ItemCard(item: item, context: context);
+        },
+      ),
+    );
+  }
+}
+
+class ItemCard extends StatelessWidget {
+  final Item item;
+  final BuildContext context;
+
+  const ItemCard({required this.item, required this.context});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/item', arguments: item);
+      },
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(
+              8), // Tambahkan padding pada keseluruhan Card
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Hero(
+                tag: 'productImage${item.name}',
+                child: AspectRatio(
+                  aspectRatio:
+                      1, // Rasio lebar-tinggi 1:1 untuk ukuran yang sama
+                  child: Image.asset(item.imageUrl, fit: BoxFit.cover),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment
+                    .spaceBetween, // Agar rating berada di sebelah kanan
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 8), // Padding di atas teks "name"
+                    child: Text(
+                      item.name,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween, 
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8), 
-                          child: Text(
-                            item.name,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            const Icon(Icons.star, color: Colors.amber),
-                            Text(
-                              item.rating.toString(),
-                              style: const TextStyle(
-                                color: Colors.amber,
-                                fontSize: 14,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8),
-                      child: Text(
-                        'Rp. ${item.price}',
+                  ),
+                  Row(
+                    children: [
+                      const Icon(Icons.star, color: Colors.amber),
+                      Text(
+                        item.rating.toString(),
                         style: const TextStyle(
-                          color: Colors.deepOrange,
+                          color: Colors.amber,
                           fontSize: 14,
                         ),
                       ),
-                    ),
-                    Text(
-                      'Stok: ${item.stok}',
-                      style: const TextStyle(
-                        color: Colors.grey,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                ],
               ),
-            ),
-          );
-        },
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: const BoxDecoration(
-            color: Colors.blue,
-          ),
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Nama: Sely Ruli Amanda',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text(
+                  'Rp. ${item.price}',
+                  style: const TextStyle(
+                    color: Colors.deepOrange,
+                    fontSize: 14,
+                  ),
                 ),
               ),
               Text(
-                'NIM: 2141720005',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+                'Stok: ${item.stok}',
+                style: const TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14,
                 ),
               ),
             ],
@@ -183,25 +215,21 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
 ```
-#### 3. file item_page.dart
+
+#### detailsItem_widget.dart
 
 ```dart
-import 'package:belanja/models/item.dart';
 import 'package:flutter/material.dart';
+import 'package:belanja/models/item.dart';
 
-class ItemPage extends StatelessWidget {
-  const ItemPage({super.key});
+class DetailsItem extends StatelessWidget {
+  const DetailsItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Item Details'),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -211,7 +239,8 @@ class ItemPage extends StatelessWidget {
               tag: 'productImage${itemArgs.name}',
               child: Image.asset(itemArgs.imageUrl),
             ),
-            const SizedBox(height: 16), 
+            const SizedBox(
+                height: 16), // Tambahkan jarak antara gambar dan teks
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -232,7 +261,7 @@ class ItemPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 8), // Tambahkan jarak antara nama dan harga
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -258,10 +287,50 @@ class ItemPage extends StatelessWidget {
     );
   }
 }
-
 ```
 
-### Langkah 3: Lengkapi Kode di main.dart
+#### bottom_widget.dart
+
+```dart
+import 'package:flutter/material.dart';
+
+class BottomWidget extends StatelessWidget {
+  const BottomWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: const BoxDecoration(
+          color: Colors.blue,
+        ),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Nama: Sely Ruli Amanda',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+            ),
+            Text(
+              'NIM: 2141720005',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+### Langkah 4: Lengkapi Kode di main.dart
 #### file main.dart
 
 ```dart
