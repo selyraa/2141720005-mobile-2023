@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 ## Hasil Running
-![Alt text](image.png)
+![Alt text](./docs/image.png)
 
 # Tugas Praktikum
 #### 1. Selesaikan Praktikum tersebut, lalu dokumentasikan dan push ke repository Anda berupa screenshot hasil pekerjaan beserta penjelasannya di file README.md! 
