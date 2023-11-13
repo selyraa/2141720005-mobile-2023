@@ -60,3 +60,9 @@ Variabel `completer` digunakan untuk mengontrol dan menyelesaikan suatu `Future`
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
 ### Jawab:
 ![images](./docs/result_4.gif)
+![images](./docs/commit%205.jpg)
+
+## Praktikum 4: Memanggil Future secara paralel
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 7".
+### Jawab:
+![images](./docs/result_5.gif)
