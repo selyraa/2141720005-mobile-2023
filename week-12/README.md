@@ -106,7 +106,7 @@ Jadi, jika operasi `returnError()` berhasil, maka 'Success' akan ditampilkan di 
 ### Jawab:
 ![images](./docs/soal%2011.jpg)
 
-![images](./docs/soal%2012.jpg)
+![images](./docs/ss%20current%20location.png)
 
 ![images](./docs/commit%2010.jpg)
 
@@ -129,3 +129,17 @@ Sedangkan berikut ini adalah running pada device android
 
 ## Praktikum 7: Manajemen Future dengan FutureBuilder
 
+### Soal 13
+### Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+### Jawab:
+Dari kedua praktikum tersebut tidak memiliki perbedaan UI. Keduanya tetap menampilkan koordinat Geolokasi dengan layout yang sama. Hal ini terjadi karena keduanya masih mengambil lokasi secara sinkron dalam blok `initState`. Sebenarnya untuk pembaruan UI terdapat perbedaan. 
+- Pada kasus pertama, `setState` digunakan setelah mendapatkan posisi untuk memperbarui variabel state `myPosition`, yang kemudian digunakan dalam UI.
+- Sementara pada kasus kedua, position adalah objek `Future<Position>` yang digunakan dalam `FutureBuilder`. Meskipun tidak ada pemanggilan `setState` secara langsung, `FutureBuilder` secara otomatis mengelola pembaruan UI sesuai dengan status future yang berkaitan.
+
+Namun pada akhirnya, hasil tampilan UI terlihat sama karena keduanya memiliki penundaan atau delay yang sama, yakni 3 detik. Selain itu, UI bisa terlihat sama karena `FutureBuilder` secara otomatis mengelola pembaruan UI, bahkan tanpa pemanggilan setState langsung.
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 13".
+### Jawab:
+
+![images](./docs/result%20soal%2013.gif)
+
+Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
