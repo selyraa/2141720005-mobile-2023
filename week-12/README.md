@@ -39,5 +39,13 @@ Metode `catchError` digunakan dalam konteks Future (keluaran dari fungsi `getDat
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 4".
 ### Jawab:
 ![images](./docs/result_2.gif)
+![images](./docs/commit%203.jpg)
 
 ## Praktikum 3: Menggunakan Completer di Future
+### Soal 5
+### Jelaskan maksud kode langkah 2 tersebut!
+### Jawab:
+Variabel `completer` digunakan untuk mengontrol dan menyelesaikan suatu `Future` secara manual. Dengan menggunakan `Completer`, Anda dapat menentukan kapan suatu `Future` dianggap selesai (completed). Kemudian dalam method `getNumber()`, `completer` diinisialisasi sebagai objek `Completer<int>`, lalu dipanggil method `calculate()` yang menjalankan tugas yang memerlukan waktu. Setelah tugas selesai, `completer.complete()` digunakan untuk menyelesaikan `Future` terkait dengan nilai 42. Method `getNumber` mengembalikan `completer.future`, memungkinkan pengguna untuk menunggu hingga perhitungan selesai. Dengan demikian, kode ini menciptakan suatu struktur yang memberikan kendali manual terhadap penyelesaian suatu `Future`, berguna ketika kita ingin mengendalikan kapan suatu operasi asynchronous dianggap selesai dan nilai dari operasi tersebut dapat diakses.
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 5".
+### Jawab:
+![images](./docs/result_3.gif)
