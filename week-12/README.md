@@ -49,3 +49,14 @@ Variabel `completer` digunakan untuk mengontrol dan menyelesaikan suatu `Future`
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 5".
 ### Jawab:
 ![images](./docs/result_3.gif)
+![images](./docs/commit%204.jpg)
+
+### Soal 6
+### Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+### Jawab:
+- Pada Langkah 5 perbedaannya terletak pada method `calculate()`. Kode sebelumnya tanpa meng-handle error secara eksplisit. Jika terjadi kesalahan selama penundaan, `completer.complete(42);` dijalankan tanpa meng-handle atau menyatakan jenis kesalahan yang mungkin terjadi. Untuk kode setelah diubah terdapat penambahan struktur try-catch. Jika terjadi kesalahan selama penundaan, `completer.completeError({});` dijalankan, yang menandakan bahwa terjadi kesalahan dan memberikan objek kosong sebagai payload error.
+- Pada Langkah 6 perbedaanya terletak pada `onPressed()`. Kode sebelumnya menggunakan `catchError` pada `Future` hasil dari `getNumber()`. Jika ada kesalahan, string "An error occurred" ditetapkan pada variabel `result`. Untuk kode setelah diubah menggunakan `blok` then dan `catchError` langsung pada pemanggilan `getNumber()`. Jika sukses, hasil perhitungan diubah menjadi string dan disetel pada variabel `result`. Jika ada kesalahan, string "An error occurred" ditetapkan pada variabel `result`.
+
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
+### Jawab:
+![images](./docs/result_4.gif)

@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Future Demo Sely',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
@@ -43,9 +44,13 @@ class _FuturePageState extends State<FuturePage> {
     return completer.future;
   }
 
-  Future calculate() async {
-    await Future.delayed(const Duration(seconds: 5));
-    completer.complete(42);
+  calculate() async {
+    try {
+      await Future.delayed(const Duration(seconds: 5));
+      completer.complete(42);
+    } catch (_) {
+      completer.completeError({});
+    }
   }
 
   Future<int> returnOneAsync() async {
@@ -89,6 +94,8 @@ class _FuturePageState extends State<FuturePage> {
                 setState(() {
                   result = value.toString();
                 });
+              }).catchError((e) {
+                result = 'An error occurred';
               });
               // count();
               // setState(() {});
