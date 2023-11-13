@@ -96,3 +96,14 @@ Terakhir, menggunakan `whenComplete` untuk menentukan tindakan yang akan dilakuk
 Blok `finally` akan selalu dijalankan, baik operasi berhasil atau gagal.
 
 Jadi, jika operasi `returnError()` berhasil, maka 'Success' akan ditampilkan di dalam variabel `result`. Jika terjadi kesalahan, pesan kesalahan yang dihasilkan oleh `Exception` akan ditampilkan. Selain itu, pesan 'Complete' akan dicetak ke konsol dalam kedua kasus, karena blok `whenComplete` atau `finally` selalu dijalankan.
+
+![images](./docs/commit%209.jpg)
+
+## Praktikum 6: Menggunakan Future dengan StatefulWidget
+
+### Soal 11
+### Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+### Jawab:
+![images](./docs/soal%2011.jpg)
+
+![images](./docs/soal%2012.jpg)
