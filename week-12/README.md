@@ -84,3 +84,15 @@ Perbedaan Kode pada langkah 1 dan 4
 ### Jawab:
 
 ![images](./docs/result_6.gif)
+![images](./docs/commit%208.jpg)
+
+### Soal 10
+### Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+### Jawab:
+Setelah method `handleError()` dipanggil, maka outputnya akan tetap sama, pesan kesalahan 'Exception: Something terrible happened!' akan tetap ditampilkan. Namun kedua kode pada langkah 1 dan 4 tersebut memiliki perbedaan dalam menangani error yang terjadi.
+- Langkah 1 menggunakan `then` untuk menangani hasil sukses dari `returnError()`. Kemudian menggunakan `catchError` untuk menangkap dan menangani kesalahan yang mungkin terjadi selama operasi asynchronous.
+Terakhir, menggunakan `whenComplete` untuk menentukan tindakan yang akan dilakukan setelah operasi selesai, baik dengan sukses atau dengan kesalahan.
+- Langkah 4 menggunakan blok `try-catch` untuk menangkap kesalahan yang mungkin terjadi selama operasi asynchronous. Dengan menggunakan `try-catch ` ini akan mengizinkan lebih banyak kontrol atas kode yang dijalankan ketika kesalahan terjadi dan memberikan pesan kesalahan di dalam `result`. Jika ada kesalahan, hasil kesalahan dikirim ke dalam `setState` untuk pembaruan tampilan.
+Blok `finally` akan selalu dijalankan, baik operasi berhasil atau gagal.
+
+Jadi, jika operasi `returnError()` berhasil, maka 'Success' akan ditampilkan di dalam variabel `result`. Jika terjadi kesalahan, pesan kesalahan yang dihasilkan oleh `Exception` akan ditampilkan. Selain itu, pesan 'Complete' akan dicetak ke konsol dalam kedua kasus, karena blok `whenComplete` atau `finally` selalu dijalankan.
