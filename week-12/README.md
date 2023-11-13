@@ -143,3 +143,13 @@ Namun pada akhirnya, hasil tampilan UI terlihat sama karena keduanya memiliki pe
 ![images](./docs/result%20soal%2013.gif)
 
 Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
+
+![images](./docs/commit%2012.jpg)
+
+### Soal 14
+### Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+### Jawab:
+Tidak ada perbedaan UI dengan langkah sebelumnya. Hal ini dikarenakan pada langkah ini hanya menambahkan `handleError()` yang akan dijalankan ketika terdapat kesalahan. Namun karena pada langkah ini tidak ada kesalahan yang terjadi selama pemrosesan data lokasi. Oleh karena itu, bagian "Something terrible happened!" dari blok penanganan kesalahan tidak akan ditampilkan.
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 14".
+### Jawab:
+![images](./docs/result%20soal%2014.gif)
