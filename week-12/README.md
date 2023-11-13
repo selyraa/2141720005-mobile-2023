@@ -27,3 +27,17 @@ Metode `catchError` digunakan dalam konteks Future (keluaran dari fungsi `getDat
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 3".
 ### Jawab:
 ![images](./docs/result_1.gif)
+![images](./docs/commit%202.jpg)
+
+## Praktikum 2: Menggunakan await/async untuk menghindari callbacks
+
+### Soal 4
+### Jelaskan maksud kode langkah 1 dan 2 tersebut!
+### Jawab:
+- `returnOneAsync()`, `returnTwoAsync()`, `returnThreeAsync()`: Tiga fungsi ini masing-masing mengembalikan objek Future dengan tipe data int. Setiap fungsi menunggu selama 3 detik menggunakan await `Future.delayed(const Duration(seconds: 3));` sebelum mengembalikan nilai tertentu (1, 2, atau 3).
+- count(): Fungsi count merupakan sebuah fungsi Future yang juga menggunakan kata kunci `async`. Di dalamnya, ada variabel lokal total yang diinisialisasi dengan nilai 0. Kemudian, fungsi `returnOneAsync()` dipanggil dengan menggunakan `await`, yang berarti eksekusi fungsi ini akan ditunda hingga hasilnya siap. Nilai yang dikembalikan dari `returnOneAsync()` ditambahkan ke variabel total. Proses yang sama dilakukan untuk `returnTwoAsync()` dan `returnThreeAsync()`. Setelah semuanya selesai, nilai total diubah menjadi string dan disimpan di variabel result. Terakhir, fungsi `setState` dipanggil. Ini biasanya digunakan dalam Flutter untuk memberi tahu framework bahwa ada perubahan dalam state dan perlu memperbarui tampilan.
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 4".
+### Jawab:
+![images](./docs/result_2.gif)
+
+## Praktikum 3: Menggunakan Completer di Future
