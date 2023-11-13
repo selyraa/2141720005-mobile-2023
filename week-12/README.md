@@ -107,3 +107,20 @@ Jadi, jika operasi `returnError()` berhasil, maka 'Success' akan ditampilkan di 
 ![images](./docs/soal%2011.jpg)
 
 ![images](./docs/soal%2012.jpg)
+
+![images](./docs/commit%2010.jpg)
+
+### Soal 12
+Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 12".
+### Jawab:
+Jika melakukan running project pada browser, koordinat GPS tetap bisa muncul atau didapatkan. Hal ini dikarenakan Flutter web menggunakan API Geolocation yang disediakan oleh browser secara langsung. Pada Flutter web tersebut, izin untuk mengakses lokasi dikeola oleh browser, bukan pada sistem operasi (seperti Android pada platform mobile). Oleh karena itu meskipun tidak menambahkan izin secara implisit pada `AndroidManifest`, koordinat GPS tetap bisa didapatkan pada browser, namun tetap dengan izin pengguna.
+
+Berikut ini adalah hasil ketika running pada web browser
+
+![images](./docs/running%20web.gif)
+
+Sedangkan berikut ini adalah running pada emulator android
+
+![images](./docs/result_7.gif)
