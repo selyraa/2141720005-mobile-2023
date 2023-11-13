@@ -15,7 +15,7 @@ class _LocationScreenState extends State<LocationScreen> {
     super.initState();
     getPosition().then((Position myPos) {
       myPosition =
-          'Latitude: ${myPos.latitude.toString()}\nLongitude: ${myPos.longitude.toString()}';
+          'Latitude: ${myPos.latitude.toString()}, Longitude: ${myPos.longitude.toString()}';
       setState(() {
         myPosition = myPosition;
       });

@@ -121,6 +121,11 @@ Berikut ini adalah hasil ketika running pada web browser
 
 ![images](./docs/running%20web.gif)
 
-Sedangkan berikut ini adalah running pada emulator android
+Sedangkan berikut ini adalah running pada device android
 
-![images](./docs/result_7.gif)
+![images](./docs/result%20prak%206.gif)
+
+![images](./docs/commit%2011.jpg)
+
+## Praktikum 7: Manajemen Future dengan FutureBuilder
+
