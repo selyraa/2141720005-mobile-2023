@@ -173,3 +173,19 @@ Ketika button diklik, maka akan berubah warna sesuai dengan yang telah diatur pa
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 16".
 ### Jawab:
 ![images](./docs/result%20soal%2016.gif)
+
+![images](./docs/commit%2014.jpg)
+
+## Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
+
+### Soal 17
+### Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+### Jawab:
+Ketika Anda mengklik tombol "Change Color" dan memilih salah satu warna pada dialog, warna latar belakang layar seharusnya berubah sesuai dengan warna yang dipilih. Hal ini terjadi karena nilai `color` diperbarui dengan nilai warna yang dipilih dalam fungsi` _showColorDialog`, dan kemudian `widget` diperbarui menggunakan `setState`, yang akan membangun ulang `widget` dan mencerminkan perubahan warna pada layar.
+### Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+### Jawab:
+*Done*
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 17".
+### Jawab:
+![images](./docs/result%20soal%2017.gif)
+
