@@ -189,3 +189,4 @@ Ketika Anda mengklik tombol "Change Color" dan memilih salah satu warna pada dia
 ### Jawab:
 ![images](./docs/result%20soal%2017.gif)
 
+![images](./docs/commit%2015.jpg)
