@@ -153,3 +153,23 @@ Tidak ada perbedaan UI dengan langkah sebelumnya. Hal ini dikarenakan pada langk
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 14".
 ### Jawab:
 ![images](./docs/result%20soal%2014.gif)
+
+![images](./docs/commit%2013.jpg)
+
+## Praktikum 8: Navigation route dengan Future Function
+
+### Soal 15
+### Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda. Silakan ganti dengan warna tema favorit Anda.
+### Jawab:
+
+![images](./docs/ss%20prak%208.png)
+
+### Soal 16
+### Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian?
+Ketika button diklik, maka akan berubah warna sesuai dengan yang telah diatur pada `ElevatedButton()` di class `navigation_second.dart`. Hal ini dikarenakan pada terdapat fungsi `Navigation.pop()` pada setiap button yang memiliki parameter berupa `context` dan `color` yang telah diatur, sehingga ketika setiap button diklik akan menampilkan warna yang berbeda-beda sesuai dengan isi varibel `color`.
+### Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+### Jawab:
+*Done*
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 16".
+### Jawab:
+![images](./docs/result%20soal%2016.gif)
