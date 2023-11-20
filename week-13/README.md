@@ -30,4 +30,15 @@ Di dalam Dart, keyword `yield*` digunakan untuk menghasilkan nilai-nilai dari su
 Kode tersebut mendefinisikan kelas `ColorStream` yang memiliki metode `getColors` sebagai asynchronous generator function, yang mana akan menghasilkan stream warna yang berulang setiap detik, dengan warna yang ditampilkan merupakan warna yang diambil dari daftar warna yang telah ditentukan.
 
 ### Lakukan commit hasil jawaban Soal 3 dengan pesan "W13: Jawaban Soal 3"
+### Jawab:
+
+![images](./docs/commit-3.jpg)
+
+### Soal 4
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+### Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"
+### Jawab:
+
+![images](./docs/result-soal-4.gif)
+
 
