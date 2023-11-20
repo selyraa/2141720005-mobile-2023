@@ -6,9 +6,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 class StreamHomePage extends StatefulWidget {
-  const StreamHomePage({super.key});
+  const StreamHomePage({Key? key}) : super(key: key);
 
   @override
   State<StreamHomePage> createState() => _StreamHomePageState();
@@ -34,11 +33,11 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late ColorStream colorStream;
 
   void changeColor() async {
-    colorStream.getColors().listen((eventColor) {
+    await for (var eventColor in colorStream.getColors()) {
       setState(() {
         bgColor = eventColor;
       });
-    });
+    }
   }
 
   @override
@@ -48,6 +47,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
     changeColor();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
