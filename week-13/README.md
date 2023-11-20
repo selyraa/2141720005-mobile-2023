@@ -68,3 +68,16 @@ Maksud dari kode pada langkah 8 dan langkah 10
 ### Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
 ### Jawab:
 ![images](./docs/result-soal-6.gif)
+
+![images](./docs/commit-6.jpg)
+
+### Soal 7
+### Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+### Jawab:
+Kode pada langkah 13 sampai 15 tersebut akan membuat handling ketika terjadi error menggunakan metode `addError()` pada class stream.dart. Jika terjadi error atau kesalahan selama proses iterasi atau ketika stream mengembalikan nilai, maka nilai dari `lastNumber` diatur menjadi -1.
+
+![images](./docs/result-soal-7.gif)
+
+### Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
+### Jawab:
+*Done*
