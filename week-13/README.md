@@ -18,3 +18,16 @@
 ### Jawab:
 
 ![images](./docs/soal-2.jpg)
+
+![images](./docs/commit-2.jpg)
+
+### Soal 3
+### Jelaskan fungsi keyword yield* pada kode tersebut!
+### Jawab:
+Di dalam Dart, keyword `yield*` digunakan untuk menghasilkan nilai-nilai dari suatu stream. Keyword ini akan menghubungkan atau 'melempar' nilai-nilai dari stream ke dalam stream lainnya. Jadi ketika terdapat async* dan yield*, maka kode tersebut digunakan untuk menghasilkan suatu nilai dari stream secara berurutan, tanpa perlu secara eksplisit mengeluarkan setiap nilai satu per satu.
+### Apa maksud isi perintah kode tersebut?
+### Jawab:
+Kode tersebut mendefinisikan kelas `ColorStream` yang memiliki metode `getColors` sebagai asynchronous generator function, yang mana akan menghasilkan stream warna yang berulang setiap detik, dengan warna yang ditampilkan merupakan warna yang diambil dari daftar warna yang telah ditentukan.
+
+### Lakukan commit hasil jawaban Soal 3 dengan pesan "W13: Jawaban Soal 3"
+
