@@ -81,3 +81,15 @@ Kode pada langkah 13 sampai 15 tersebut akan membuat handling ketika terjadi err
 ### Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
 ### Jawab:
 *Done*
+
+![images](./docs/commit-7.jpg)
+
+## Praktikum 3: Injeksi data ke streams
+
+### Soal 8
+### Jelaskan maksud kode langkah 1-3 tersebut!
+### Jawab:
+
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
+### Jawab:
+![images](./docs/result-soal-8.gif)
