@@ -116,3 +116,24 @@ Kode pada langkah 13 sampai 15 tersebut akan membuat handling ketika terjadi err
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
 ### Jawab:
 ![images](./docs/result-soal-9.gif)
+
+![images](./docs/commit-9.jpg)
+
+## Praktikum 5: Multiple stream subscriptions
+
+### Soal 10
+### Jelaskan mengapa error itu bisa terjadi?
+### Jawab:
+![images](./docs/soal-10.jpg)
+
+Error tersebut terjadi ketika mencoba untuk menambahkan atau membuat dua subscription pada stream yang sama, tanpa membatalkan subscription sebelumnya. Hal tersebut terjadi ketika inisialisasi subsription2 pada metode initState() karena sudah ada inisialisasi subsription untuk menangani stream yang sama pada satu waktu.
+
+### Soal 11
+### Jelaskan mengapa hal itu bisa terjadi ?
+### Jawab:
+Ketika button 'New Random Number' ditekan, maka akan menghasilkan dua angka yang sama. Hal ini merupakan output dari stream yang dipanggil oleh objek `subscription` dan `subscription2`, yang akan mengembalikan value berupa event (angka random) yang dipisahkan dengan tanda '-'. Ketika button Stop Stream ditekan, maka akan menghentikan langganan terhadap stream, dan tidak lagi bisa mengeluarkan output meskipun button 'New Random Number' ditekan. 
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 10,11".
+### Jawab:
+![images](./docs/result-soal-11.gif)
+
+
