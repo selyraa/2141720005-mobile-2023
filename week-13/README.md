@@ -93,3 +93,26 @@ Kode pada langkah 13 sampai 15 tersebut akan membuat handling ketika terjadi err
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
 ### Jawab:
 ![images](./docs/result-soal-8.gif)
+
+![images](./docs/commit-8.jpg)
+
+## Praktikum 4: Subscribe ke stream events
+### Soal 9
+### Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+### Jawab:
+
+- ![images](./docs/soal-9(1).jpg)
+
+- Langkah 2: kode tersebut digunakan untuk melakukan susbcribe atau langganan pada stream agar dapat mendapatkan informasi atau output dari stream.
+
+- ![images](./docs/soal-9(2).jpg)
+
+- Langkah 6: kode tersebut digunakan untuk membatalkan atau menghentikan subscribe pada stream. Jadi ketika screen tidak lagi ditampilkan, metode ini akan dipanggil. Hal ini berguna untuk membersihkan sumber daya dan akan menghemat penyimpanan. 
+
+- ![images](./docs/soal-9(3).jpg)
+
+- Langkah 8: Pada kode tersebut terdapat suatu kondisi, yaitu apabila stream tidak ditutup, maka angka yang akan dihasilkan atau ditampilkan adalah angka yang sesuai dengan hasil randomize. Namun, jika stream sudah ditutup atau subscription telah dihentikan, maka akan menampilkan angka -1.
+
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
+### Jawab:
+![images](./docs/result-soal-9.gif)
