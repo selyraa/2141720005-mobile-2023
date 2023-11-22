@@ -136,4 +136,19 @@ Ketika button 'New Random Number' ditekan, maka akan menghasilkan dua angka yang
 ### Jawab:
 ![images](./docs/result-soal-11.gif)
 
+![images](./docs/commit-1011.jpg)
+
+## Praktikum 6: StreamBuilder
+
+### Soal 12
+### Jelaskan maksud kode pada langkah 3 dan 7!
+### Jawab:
+- ![images](./docs/soal-12(1).jpg)
+- Langkah 3: kode tersebut mendefinisikan class `NumberStream()` yang memiliki metode `getNumbers()` untuk mengembalikan stream berisi angka acak dengan periode waktu selama 1 detik. 
+- ![images](./docs/soal-12(2).jpg)
+- Langkah 7: kode tersebut digunakan untuk membuat tampilan UI untuk menampilkan nilai dari stream secara real-time. Dengan menggunakan `StreamBuilder`, antarmuka akan diperbarui secara otomatis setiap kali ada perubahan stream, baik itu perubahan value atau ketika terdapat error. Terdapat kondisi ketika terjadi error maka akan menampilkan pesan 'Error!', ketika tidak terjadi error dan mendapatkan data dari stream maka akan menampilkan angka acak dengan gaya fontSize diatur sebesar 96, namun apabila tidak ada data yang diterima maka akan menampilkan widget kosong. 
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 12".
+### Jawab:
+![images](./docs/result-soal-12.gif)
+
 
