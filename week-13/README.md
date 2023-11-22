@@ -181,3 +181,5 @@ Berikut adalah beberapa poin terkait konsep pola BLoC dalam kode yang diberikan:
 ### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukxan commit dengan pesan "W13: Jawaban Soal 13".
 ### Jawab:
 ![images](./docs/result-soal-13.gif)
+
+![images](./docs/commit-13.jpg)
