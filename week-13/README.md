@@ -151,4 +151,33 @@ Ketika button 'New Random Number' ditekan, maka akan menghasilkan dua angka yang
 ### Jawab:
 ![images](./docs/result-soal-12.gif)
 
+![images](./docs/commit-12.jpg)
 
+## Praktikum 7: BLoC Pattern
+
+### Soal 13
+### Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya?
+### Jawab:
+Berikut adalah beberapa poin terkait konsep pola BLoC dalam kode yang diberikan:
+
+- RandomNumberBloc Class:
+
+    `RandomNumberBloc` adalah implementasi BLoC. Ini memiliki dua `StreamController`: satu untuk mengontrol input events (`_generateRandomController`), dan satu untuk mengontrol output (`_randomNumberController`). `_generateRandomController` digunakan untuk mengirim peristiwa yang akan memicu pembangkitan nomor acak. Sedangkan `_randomNumberController` mengontrol stream output yang berisi nomor acak yang dihasilkan.
+
+- MyHomePage Class:
+
+    MyHomePage adalah contoh antarmuka pengguna yang sederhana yang tidak langsung terlibat dengan logika bisnis. Ini tidak mengandung logika khusus terkait BLoC. Namun, dalam pengembangan aplikasi yang lebih kompleks, logika bisnis dapat dipindahkan ke BLoC untuk menjaga kesatuan dan pemisahan tanggung jawab.
+
+- RandomScreen Class:
+    
+    RandomScreen adalah contoh antarmuka pengguna yang menggunakan RandomNumberBloc.
+    State dari widget ini diatur oleh stream yang dikeluarkan oleh `_bloc.randomNumber`. Setiap kali peristiwa dikirim melalui `_bloc.generateRandom`, nomor acak baru dihasilkan dan diperbarui di UI.
+    Dengan memisahkan logika bisnis ke dalam `RandomNumberBloc`, antarmuka pengguna dapat fokus pada tampilan dan respons terhadap perubahan state.
+
+- Pemanggilan BLoC di main.dart:
+   
+    BLoC (RandomNumberBloc) diinisialisasi dan dimiliki oleh `_RandomScreenState`.
+    Pemanggilan _bloc.generateRandom.add(null) pada tombol tindakan antarmuka pengguna memicu pembangkitan nomor acak melalui BLoC.
+### Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukxan commit dengan pesan "W13: Jawaban Soal 13".
+### Jawab:
+![images](./docs/result-soal-13.gif)
